@@ -1,13 +1,14 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Getting started extension",
   "version": "1.0.0",
   "description": "Getting started Google Developers extension",
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"],
+    "persistent": false
   },
-  "permissions": ["storage", "activeTab", "scripting"],
-  "action": {
+  "permissions": ["storage", "declarativeContent", "activeTab"],
+  "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "/images/get_started16.png",
